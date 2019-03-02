@@ -10,7 +10,6 @@ import { HeroService } from '../hero.service';
 })
 export class HeroesComponent implements OnInit {
   heroes: Hero[]; // An array of heroes
-  selectedHero: Hero; // The hero we are currently viewing
 
   constructor(private heroService: HeroService) { }
 
@@ -18,15 +17,10 @@ export class HeroesComponent implements OnInit {
     this.getHeroes(); // Initialize our heroes
   }
 
-  // Set our selected hero here
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-  }
-
   // Gets the heroes provided by the hero service
   getHeroes(): void {
     this.heroService.getHeroes()
-        .subscribe(heroes => this.heroes = heroes);
+      .subscribe(heroes => this.heroes = heroes);
   }
 
 }
