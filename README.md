@@ -1,5 +1,11 @@
 # AngularTourOfHeroes
 
+## API Calls
+The folllowing calls need to be implemented by the backend server that is providing the hero data. The actual url that is used by is set in hero.service.ts
+- api/heroes
+- api/heroes/<ID>
+- api/heroes/?name=<HERO_NAME>
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.4.
 
 ## Development server
